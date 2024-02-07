@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "dragon-ball";
+    src: url("../fonts/DragonBall.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "dragon-ball", sand-serif;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+}
+
+/* Game */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front > img, .back > img {
+    width: 150px;
+    height: 200px;
+    display: block;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    padding: 17px;
+    background-color: rgba(32, 29, 29, 0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Modal */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.modal {
+    background-color: white;
+    width: 20%;
+    height: 20%;
+    gap: 10%;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-buttons {
+    font-size: 36px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.modal-buttons:hover {
+    transform: scale(1.1);
+}
+
+.modal-buttons button {
+    background: rgba(255, 215, 0, 0.9);
+    border: 2px solid #DAA520;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+.modal-buttons button:hover {
+    background: rgba(255, 223, 0, 1);
+    box-shadow: 0px 0px 20px #FFF;
+    transform: scale(1.1);
+}
+/* Game Title */
+#game-title-container {
+    color: #FACC2E;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+}
+
+#game-title-container h1{
+    font-size: 80px;
+}
+
+#game-title-container h2 {
+    font-size: 48px;
+}
+/* Start Button */
+#start-button {
+    background: rgba(255, 215, 0, 0.9);
+    border: 2px solid #DAA520;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    }
+
+#start-button:hover {
+    background: rgba(255, 223, 0, 1);
+    box-shadow: 0px 0px 20px #FFF;
+    transform: scale(1.1);
+}
+
+#start-button:active {
+    box-shadow: 0px 0px 5px #FFF;
+    transform: scale(0.9);    
+}
+/* Score */
+#score-container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px black;
+}
+
+#score-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(122, 117, 117, 0.5);
+    padding-left: 20px;
+    border-radius: 10px;
+}
