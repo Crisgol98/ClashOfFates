@@ -14,9 +14,9 @@ export const renderEnding = () => {
         <section id="start-container">
             <div id="game-title-container">
                 <h1>YOU WIN</h1>
-                <h2>Attempts: ${score.attemps}</h2>
+                <h2>Attempts: ${score.attempts}</h2>
             </div>
-            <button id="start-button">Reiniciar</button>
+            <button id="start-button">Restart</button>
             <audio id="endMusic" src="./app/sounds/endMusic.mp3" autoplay loop></audio>
         </section>
     `

@@ -75,8 +75,8 @@ export class Card {
                 }, 1000)
             }
         }
-        score.attemps++
-        document.getElementById("attemps").innerText = `Attemps: ${score.attemps}`
+        score.attempts++
+        document.getElementById("attempts").innerText = score.attempts
         if (checkWinner()) {
             setTimeout(() => {
                 renderEnding()

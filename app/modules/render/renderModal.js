@@ -12,10 +12,10 @@ export const renderModal = () => {
     container.classList.add("modal-container")
     container.innerHTML = `
         <div class="modal">
-            <h2>Tienes una partida a medias</h2>
-            <h3>¿Quieres continuar?</h3>
+            <h2>You have an unfinished game</h2>
+            <h3>Would you like to continue?</h3>
             <div class="modal-buttons">
-                <button id="yes">Sí</button>
+                <button id="yes">Yes</button>
                 <button id="no">No</button>
             </div>
         </div>
@@ -26,7 +26,7 @@ export const renderModal = () => {
     yes.addEventListener("click", () => {
         if (localStorage.getItem("score") !== null) {
             const newScore = JSON.parse(localStorage.getItem("score"))
-            score.attemps = newScore.attemps
+            score.attempts = newScore.attempts
         }
         if (localStorage.getItem("table") !== null) {
             const newTable = JSON.parse(localStorage.getItem("table"))

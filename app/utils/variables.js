@@ -8,5 +8,5 @@ export const table = createTable(width)
 export const cardHistory = []
 export const score = {
     points: 0,
-    attemps: 0
+    attempts: 0
 }

@@ -25,8 +25,8 @@ export const renderMain = () => {
     scoreContainer.id = "score-container"
     scoreContainer.innerHTML = `
         <div>
-            <h2>Score</h2>
-            <p id="attemps">Attemps: ${score.attemps}</p>
+            <h2>Attempts</h2>
+            <p id="attempts">${score.attempts}</p>
         </div>
     `
     const volumeContainer = document.createElement("section")
